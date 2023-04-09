@@ -38,9 +38,9 @@
             margin: 0px auto;
            
         }
-     section > div,section > article{
-            border:1px solid wheat;
-            border-radius: 20px;
+        section > div,section > article{
+            border:10px double wheat;
+            border-radius: 20px 45px;
             height:30vh;
             display: flex;
             flex-flow: row wrap;
@@ -48,7 +48,9 @@
             align-items: center;
             gap:2%;
             margin-top:20%;
+        
             letter-spacing: 2px;
+           
         }
         label{
             display: flex;
@@ -69,8 +71,9 @@
             letter-spacing: 2px;
             cursor:grab;
         }
-
+        
         section > div button:active{
+            filter:drop-shadow(2px 3px 6px white) ;
             cursor:grabbing;
         }
         section > div button:hover{
@@ -80,14 +83,28 @@
         }
         article button:last-child{
             background-color: transparent;
-            color:wheat;
+            /* color:wheat; */
             border:none;
             transform: scale(1);
-        
+            border-radius:50%;
+            /* background-color: crimson; */
+            padding:8px;
+           
+            
+            
         }
         article button:last-child:active{
             transform: scale(1.05);
         }
+        article button:last-child span{
+            font-size: 40px;
+            color: yellowgreen;
+        }
+        article button:last-child span:active{
+            filter:drop-shadow(2px 3px 6px white) ;
+
+        }
+    
         h1{
             text-align: center;
         }
@@ -107,6 +124,7 @@
             padding:6px 12px;
         
         }
+     
         
     </style>
 </head>
@@ -133,7 +151,7 @@
     
         <article id="otp-container">
            
-            <input id="otptext" value="123456" readonly>
+            <input id="otptext" value="1234" readonly>
             <button type="button" id="copybtn">
                 <span class="material-symbols-outlined">
                     content_copy
